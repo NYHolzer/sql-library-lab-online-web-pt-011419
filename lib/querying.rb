@@ -19,6 +19,7 @@ def select_name_and_series_subgenres_of_authors
 end
 
 def select_series_title_with_most_human_characters
+<<<<<<< HEAD
   <<-SQL
     SELECT series.title
     FROM series
@@ -30,6 +31,9 @@ def select_series_title_with_most_human_characters
     ORDER BY COUNT(*) DESC
     LIMIT 1
   SQL
+=======
+  "SELECT series.title FROM series INNER JOIN characters ON series.id = characters.series_id"
+>>>>>>> 47749350da9abdeb44bf9fd2f9b1a3ccefb18e5a
 end
 
 def select_character_names_and_number_of_books_they_are_in
